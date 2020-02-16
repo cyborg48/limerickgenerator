@@ -27,12 +27,11 @@ var line5 = "_conj2_ _noun6_ _verb4_ _noun7_";
 var gender, aan1, noun1, name, verb1, art1, adj1, noun2, prep, art2, noun3, art3, verb2, art4, noun4, conj1, verb3, art5, noun5, conj2, noun6, verb4, noun7; 
 
 var pronoun;
+var setPronoun = ["", ""];
 
 var syllableCounts = [0, 0, 0, 0, 0];
 
-var loading;
-var limerick;
-var start;
+var loading, limerick, start, namebox, pronounbox;
 
 var tries = 0;
 
@@ -40,6 +39,10 @@ function setup(){
 
 	limerick = document.getElementById("limerick");
 	start = document.getElementById("start");
+	limerick.style.visibility = "hidden";
+	namebox = document.getElementById("name");
+	pronounbox = document.getElementById("pronoun");
+	
 }
 
 function showLimerick(){
@@ -63,6 +66,14 @@ function generate(){
 		name = femalenames[Math.floor(Math.random() * femalenames.length)];
 		articles_pronouns[2] = 'her';
 		pronoun = "She";
+	}
+
+	if(namebox.value != "" && namebox.value != undefined){
+		name = namebox.value;
+		if(setPronoun[0] != "" && setPronoun[0] != undefined){
+			articles_pronouns[2] = setPronoun[1];
+			pronoun = setPronoun[0];
+		}
 	}
 
 	console.log(name);
@@ -257,5 +268,13 @@ function article(noun){
 		art = "a";
 	}
 	return art;
+
+}
+
+
+function changePronoun(pro, pos){
+	setPronoun[0] = pro;
+	setPronoun[1] = pos;
+	pronounbox.innerHTML = pro;
 
 }
