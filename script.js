@@ -278,3 +278,7 @@ function changePronoun(pro, pos){
 	pronounbox.innerHTML = pro;
 
 }
+
+function jump(pos){
+	window.location = 'index.html#' + pos;
+}

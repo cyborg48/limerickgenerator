@@ -1,3 +1,7 @@
+html {
+  scroll-behavior: smooth;
+}
+
 @keyframes colorswitch {
   0%   {background-color: lightskyblue;}
   25%  {background-color: aqua;}
@@ -24,24 +28,29 @@ body {
   animation-iteration-count: infinite;***/
 }
 
-h1 {
-  color: white;
-  text-align: center;
-  font-family: sans-serif;
-  font-size: 50px;
-}
-
 h2 {
   color: white;
   text-align: center;
-  font-family: sans-serif;
-  font-size: 50px;
+  font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+  font-size: 40px;
 }
 
 a {
   color: white;
   text-align: center;
-  font-family: sans-serif;
+  font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+  font-size: 20px;
+  text-decoration: none;
+}
+
+a:hover{
+	color:paleturquoise;
+}
+
+h1 {
+  color: white;
+  text-align: center;
+  font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
   font-size: 50px;
   animation: fontcolor;
   animation-duration: 5s;
@@ -52,7 +61,7 @@ a {
 p {
   color: yellow;
   text-align: center;
-  font-family: sans-serif;
+  font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
   font-size: 20px;
   animation: fontcolor;
   text-decoration: none;
@@ -87,6 +96,7 @@ input {
   font-size: 40px;
   text-align: center;
   border: none;
+  font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
 }
 
 form {
@@ -100,7 +110,7 @@ form {
   font-size: 30px;
   text-align: center;
   border: none;
-  font-family: sans-serif;
+  font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
 }
 
 input[type=text]:focus {
@@ -125,6 +135,7 @@ input[type=text]:focus {
   font-size: 40px;
   text-align: center;
   width:200px;
+  font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
 }
 
 /* The container <div> - needed to position the dropdown content */
@@ -141,6 +152,7 @@ input[type=text]:focus {
   min-width: 100px;
   z-index: 1;
   width:200px;
+  margin-bottom:50px;
 }
 
 /* Links inside the dropdown */
@@ -151,6 +163,7 @@ input[type=text]:focus {
   display: block;
   color: lightskyblue;
   font-size: 30px;
+  font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
 }
 
 /* Change color of dropdown links on hover */
@@ -164,4 +177,9 @@ input[type=text]:focus {
 /* Change the background color of the dropdown button when the dropdown content is shown */
 .dropdown:hover .dropbtn {
   background-color: paleturquoise;
+}
+
+ul {
+  list-style-type: square;
+  color: white;
 }

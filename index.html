@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+  <a name = "backToTop"></a>
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width">
@@ -9,14 +10,28 @@
   <body onload = "setup()">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js" type="text/javascript"></script>
     <script type="text/javascript" src="script.js"></script>
+    <section>
+    <h1 id = "title">Welcome to the Limerick Generator</h1>
+    <h2 id = "about" onclick="jump('jumpToAbout')">About This Application</h2>
 
-    <h1 id = "title"><a href="index.html">Welcome to the Limerick Generator</a></h1>
+    <center>
 
-    <p>Developed by a bored sixteen year old who loves programming as much as she does poetry, this site retrieves from three APIs:
-    databuse.com, Merriam Webster's dictionary API at dictionaryapi.com, and the English conjugation API at https://lt-nlgservice.herokuapp.com/. Because of all of this checking and retrieving, the limericks can take quite a while to load. Animations on the site freeze when the limerick starts loading but fear not for they will unfreeze once the algorithm stops. I am working on making this bit more smooth. And if the limerick does not load, simply try again (or change the name to something more easy-to-rhyme if you are using a custom name) - poetry is hard for machines as well as humans!</p>
+    <table>
+	    <tr> </tr>
+	    <td width = "80%">
+		    <p>This application uses the following APIs:</p>
+		    <ul>
+			    <li><a href = "https://www.datamuse.com/">Datamuse</a></li>
+			    <li><a href = "https://linguatools.org/language-apis/linguatools-conjugation-api/">Linguatools Conjugator</a></li>
+			    <li><a href = "https://www.dictionaryapi.com">Merriam Webster's Dictionary API</a></li>
+		    </ul>
+
+	    </td>
+	    <td width = "20%"><img src="https://dictionaryapi.com/images/info/branding-guidelines/MWLogo_LightBG_120x120_2x.png" width="100px" height = "100px"></img></td>
+    </table>
+    </center>
 
     <h2 id = "start" onclick="showLimerick()">Click to Generate</h2>
-
     <p id = "limerick"></p>
 
     <p>Enter a name and pronouns for a custom limerick! Works best with short names that rhyme with a lot of words.</p>
@@ -32,6 +47,23 @@
    </div>
   </div> 
    </center>
+    </section>
+
+   <br><br><br><br><br><br><br><br><br><br><br><br>
+   <section height="100%">
+   <a name="jumpToAbout"></a>
+   <br><br><br>
+   <h1>About</h1>
+
+    <p>Developed by a bored sixteen year old who loves programming as much as she does poetry, this site retrieves from the three APis listed above. It was programmed using HTML, CSS, and JavaScript, using Ajax to retrieve the data from the databases. Based on a few randomly generated conditions (i.e., subject's name and occupation), the program searches for words that rhyme or relate with these parameters using Datamuse and then checks if the word is the correct part of speech using Merriam Webster's Dictionary API. If the word is the incorrect part of speech, the program retrieves a new word and starts again, looping until it finds the correct word. Finally, the Linguatools Conjugator is used to change verbs from the infinitive to the past tense. </br></br>
+
+    Because of all of this checking and retrieving, the limericks can take quite a while to load. Animations on the site freeze when the limerick starts loading but fear not for they will unfreeze once the algorithm stops. I am working on making this bit more smooth. And if the limerick does not load, simply try again (or change the name to something more easy-to-rhyme if you are using a custom name) - poetry is hard for machines as well as humans!</p>
+
+   <br><br><br><br><br>
+    <h2 id = "about" onclick="jump('')">Back To Top</h2>
+   <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+   
+   </section>
 
   </body>
 </html>
