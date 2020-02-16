@@ -15,6 +15,8 @@ var femalenames = ['Sue', 'Mary', 'Anne', 'Ann', 'Jane', 'Liz', 'May', 'June', '
 var articles_pronouns = ['the', 'a/an', 'his/her'];
 var prepphrases = ['at', 'with', 'on', 'by', 'for'];
 var fanboys = ['for', 'and', 'nor', 'but', 'or', 'yet', 'so'];
+var starterverbs = ['ran', 'walked', 'went', 'drew', 'screamed', 'jumped', 'read', 'saw', 'ate', 'drank', 'played', 'bought', 'took', 'said', 
+'told', 'shouted', 'sang', 'kicked', 'hit'];
 
 var line1 = "There once was _a/an_ _noun1_ named _name_";
 var line2 = "Who _verb1_ _article1_ _adj1_ _noun2_ _preposition_ _article2 _noun3_";  
@@ -88,7 +90,7 @@ function generate(){
 	} else{
 		aan1 = "a";
 	}
-	verb1 = getWord("https://api.datamuse.com//words?ml=run", 'verb');
+	verb1 = getWord("https://api.datamuse.com//words?ml=" + starterverbs[Math.floor(Math.random() * starterverbs.length)], 'verb');
 	console.log("VERB: " + verb1);
 	console.log("4");
 	noun2 = getWord("https://api.datamuse.com//words?ml=" + verb1, 'noun');
