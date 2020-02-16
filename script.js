@@ -88,33 +88,33 @@ function generate(){
 	} else{
 		aan1 = "a";
 	}
-	verb1 = getWord("http://api.datamuse.com//words?ml=run", 'verb');
+	verb1 = getWord("https://api.datamuse.com//words?ml=run", 'verb');
 	console.log("VERB: " + verb1);
 	console.log("4");
-	noun2 = getWord("http://api.datamuse.com//words?ml=" + verb1, 'noun');
-	//adj1 = getWord("http://api.datamuse.com//words?ml=great", 'adjective');
+	noun2 = getWord("https://api.datamuse.com//words?ml=" + verb1, 'noun');
+	//adj1 = getWord("https://api.datamuse.com//words?ml=great", 'adjective');
 	console.log("5");
 	art1 = article(noun2);
 	console.log("6");
 	prep = prepphrases[Math.floor(Math.random() * prepphrases.length)];
 	art2 = article(noun3);
-	verb2 = getWord("http://api.datamuse.com//words?ml=" + verb1, 'verb');
+	verb2 = getWord("https://api.datamuse.com//words?ml=" + verb1, 'verb');
 	//verb2 = conjugate(verb2);
 	console.log("7");
-	noun4 = getWord("http://api.datamuse.com//words?ml=" + noun3, 'noun');
+	noun4 = getWord("https://api.datamuse.com//words?ml=" + noun3, 'noun');
 	console.log("8");
 	art4 = article(noun4);
 	conj1 = fanboys[Math.floor(Math.random() * fanboys.length)];
-	verb3 = getWord("http://api.datamuse.com//words?ml=" + verb2, 'verb');
+	verb3 = getWord("https://api.datamuse.com//words?ml=" + verb2, 'verb');
 	//verb3 = conjugate(verb3);
 	console.log("9");
-	noun5 = getWord("http://api.datamuse.com//words?rel_rhy=" + noun4, 'noun');
+	noun5 = getWord("https://api.datamuse.com//words?rel_rhy=" + noun4, 'noun');
 	console.log("10");
 	art5 = article(noun5);
 	conj2 = fanboys[Math.floor(Math.random() * fanboys.length)];
-	noun6 = getWord("http://api.datamuse.com//words?ml=" + noun4, 'noun');
+	noun6 = getWord("https://api.datamuse.com//words?ml=" + noun4, 'noun');
 	console.log("11");
-	verb4 = getWord("http://api.datamuse.com//words?ml=" + verb3, 'verb');
+	verb4 = getWord("https://api.datamuse.com//words?ml=" + verb3, 'verb');
 	//verb4 = conjugate(verb4);
 	console.log("12");
 
